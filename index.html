@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acordeón</title>
+</head>
+
+<body>
+    <main>
+        <div class="pestanias-contenedor">
+            <div class="pestanias">
+                <header>
+                    <button class="pestaniaBoton pestania-activada" data-tab="pes1">
+                        <h2>Calvo sorprendido</h2>
+                    </button>
+                    <button class="pestaniaBoton" data-tab="pes2">
+                        <h2>San Nicolas sin dinero</h2>
+                    </button>
+                    <button class="pestaniaBoton" data-tab="pes3">
+                        <h2>Bigote Cuidado</h2>
+                    </button>
+                    <button class="pestaniaBoton" data-tab="pes4">
+                        <h2>Galería </h2>
+                    </button>
+                </header>
+            </div>
+        </div>
+        <div class="contenido visible" id="pes1">
+            <button class="botonBiografia" data-tab="biografiaFoucault">
+                <h2>Biografía personal</h2>
+            </button>
+            <div id="bioPersonalFoucault">
+                <p>Michel Foucault nació el 15 de octubre de 1926 en Poitiers, Francia, en una familia de médicos. Sin
+                    embargo, en lugar de seguir la tradición y abrir cráneos, prefirió abrir mentes. Estudió en la École
+                    Normale Supérieure, donde se especializó en filosofía y psicología, porque ¿por qué elegir solo una
+                    manera de cuestionarlo todo cuando puedes tener dos?
+
+                    Foucault era un personaje excéntrico y brillante, con una fascinación por las instituciones, el
+                    poder y los archivos polvorientos. También tenía un gran sentido de la estética: siempre vestía de
+                    negro y tenía un look tan impecablemente calvo que podríamos decir que hasta su cabello era
+                    estructuralista antes de que él decidiera ser posestructuralista.</p>
+            </div>
+
+            <button class="botonAcademico" data-tab="academicoFoucault">
+                <h2>Desarrollo académico</h2>
+            </button>
+            <div id="desarrolloFoucault">
+                <p>Foucault revolucionó la filosofía con libros como Vigilar y castigar, donde básicamente nos explicó
+                    que la sociedad entera es una gran prisión con mejores vistas, y Historia de la sexualidad, donde
+                    nos mostró que hasta la forma en que entendemos el deseo está mediada por el poder. También
+                    popularizó términos como "biopoder" y "panóptico", que desde entonces han sido usados en cada tesis
+                    de ciencias sociales y en al menos el 70% de las conversaciones en cafés hipsters.
+
+                    Para él, el poder no era algo que solo tenían los políticos o los policías, sino algo difuso que se
+                    colaba en todas las instituciones: la escuela, la medicina, la psiquiatría, el lenguaje...
+                    básicamente, no había escapatoria. Si creías que simplemente estabas yendo al médico o a la
+                    universidad, Foucault estaba ahí para recordarte que en realidad estabas siendo disciplinado.
+
+                    Fue una figura clave del posestructuralismo y la teoría crítica, aunque probablemente habría odiado
+                    que lo etiquetaran así. Porque si hay algo que Foucault odiaba más que las prisiones, eran las
+                    categorías rígidas.</p>
+            </div>
+
+            <button class="botonMuerte" data-tab="muertoFoucault">
+                <h2>Fallecimiento</h2>
+            </button>
+            <div id="muerteFoucault">
+                <p>Foucault murió el 25 de junio de 1984 en París, debido a complicaciones relacionadas con el SIDA. En
+                    un giro irónico del destino, su muerte estuvo rodeada de secretismo, justo como esos archivos
+                    médicos y penitenciarios que tanto le gustaba analizar.
+
+                    A pesar de su muerte prematura, su obra sigue viva y atormentando a estudiantes que solo querían
+                    entender cómo funciona el poder sin terminar en una crisis existencial. Hoy en día, cada vez que
+                    alguien dice "el poder es una red y no una estructura jerárquica", un profesor de filosofía en algún
+                    lugar del mundo asiente con aprobación.</p>
+            </div>
+            <div id="contenidoFoto">
+                <div class="imagenes"><img src="img/foucault.jpg" alt="Michel Foucault" class="imagenes"></div>
+                <div class="texto">
+                    <h2>Michel Foucault (1926-1984)</h2>
+                    <p>Filósofo francés, experto en analizar cómo el poder te controla incluso cuando crees que eres
+                        libre.
+                        Se rumorea que si dices "vigilar y castigar" tres veces frente al espejo, aparece Foucault para
+                        explicarte por qué el panóptico es el origen de todos tus problemas. Desconfiaba de las
+                        instituciones… y con razón.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="contenido" id="pes2">
+            <button class="botonBiografia" data-tab="biografiaMarx">
+                <h2>Biografía personal</h2>
+            </button>
+            <div id="bioMarx"></div>
+            <p>Karl Marx nació el 5 de mayo de 1818 en Tréveris, Alemania. Hijo de una familia acomodada, estudió
+                derecho y filosofía, pero terminó dedicándose al periodismo y la crítica económica, básicamente
+                porque no encontraba otra manera de ganarse la vida. Se casó con Jenny von Westphalen, quien lo
+                apoyó toda su vida a pesar de que él tenía la costumbre de estar siempre corto de dinero y
+                dependiendo de préstamos de su amigo Friedrich Engels (el mejor amigo que alguien con una ideología
+                anti-burguesa podría desear).
+
+                Su vida estuvo marcada por el exilio: pasó temporadas en Francia, Bélgica y finalmente en Londres,
+                donde escribió gran parte de su obra mientras vivía en condiciones económicas bastante precarias.
+            </p>
+
+            <button class="botonAcademico" data-tab="academicoMarx">
+                <h2>Desarrollo académico</h2>
+            </button>
+            <div id="desarrolloMarx"></div>
+            <p>Marx es conocido principalmente por El capital y El manifiesto comunista, escritos junto con Engels.
+                Desarrolló la teoría del materialismo histórico y criticó ferozmente el capitalismo, al que veía
+                como un sistema explotador basado en la lucha de clases. Popularizó conceptos como "alienación",
+                "plusvalía" y "proletariado", y básicamente sentó las bases del pensamiento comunista moderno.
+
+                Aunque en vida sus ideas no fueron muy influyentes fuera de círculos intelectuales y
+                revolucionarios, con el tiempo inspiraron movimientos políticos de todo tipo: desde utopías
+                socialistas hasta regímenes que, paradójicamente, terminaron siendo bastante autoritarios
+                (probablemente él también habría terminado en sus listas negras).</p>
+
+            <button class="botonMuerte" data-tab="muertoMarx">
+                <h2>Fallecimiento</h2>
+            </button>
+            <div id="muerteMarx"></div>
+            <p>Marx murió el 14 de marzo de 1883 en Londres, dejando un epitafio simple pero contundente: "Los
+                filósofos han interpretado el mundo de distintas maneras, pero de lo que se trata es de
+                transformarlo". Lo enterraron en el cementerio de Highgate, donde su tumba se ha convertido en un
+                sitio de peregrinación para marxistas, curiosos y gente que solo quiere una foto con su busto
+                gigante.
+
+                Su legado sigue vivo: cada vez que alguien critica el capitalismo en redes sociales desde un iPhone,
+                Marx sonríe desde el más allá.</p>
+            <div id="contenidoFoto">
+                <div class="imagenes"><img src="img/marx.png" alt="Karl Marx" class="imagenes"></div>
+                <div class="texto">
+                    <h2>Karl Marx (1818-1883)</h2>
+                    <p>Filósofo, economista y revolucionario alemán. Inventó el comunismo moderno, pero murió sin un
+                        centavo
+                        (irónico, ¿no?). Creía que el capitalismo nos explotaría hasta convertirnos en robots de
+                        oficina. Si
+                        estuviera vivo, probablemente estaría escribiendo un libro titulado "El Capitalismo 2: La
+                        Venganza
+                        del Consumismo".</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="contenido" id="pes3">
+            <button class="botonBiografia" data-tab="biografiaNietzsche">
+                <h3>Biografía personal</h3>
+            </button>
+            <div id="bioNiet"></div>
+            <p>Friedrich Nietzsche nació el 15 de octubre de 1844 en Röcken, Alemania. Criado en una familia
+                luterana, su destino parecía ser la teología, pero terminó convirtiéndose en el tipo de persona que
+                haría a cualquier pastor renunciar a su fe. Estudió filología clásica en la Universidad de Basilea,
+                pero eventualmente decidió que prefería la filosofía y la crítica cultural a pasarse la vida
+                analizando textos antiguos.
+
+                Tuvo una salud frágil, que combinaba con una personalidad excéntrica y un bigote imponente que
+                parecía tener vida propia. Nietzsche nunca se casó, probablemente porque pasar el día proclamando la
+                muerte de Dios y criticando la moral de esclavos no es la mejor estrategia de conquista.</p>
+
+            <button class="botonAcademico" data-tab="academicoNietzsche">
+                <h3>Desarrollo académico</h3>
+            </button>
+            <div id="desarrolloNiet"></div>
+            <p>Nietzsche es famoso por obras como Así habló Zaratustra, Más allá del bien y del mal y El anticristo,
+                en las que dejó claro que la modernidad le parecía una gran decepción. Desarrolló ideas como la
+                "voluntad de poder", el "superhombre" y la crítica a la moral cristiana, proponiendo que el ser
+                humano debía superar sus limitaciones impuestas por la sociedad. También es conocido por haber dicho
+                "Dios ha muerto", lo que le ganó muchos enemigos entre los religiosos y algunos fanáticos de la
+                inmortalidad divina.
+
+                Su estilo de escritura era tan poético como agresivo, mezclando aforismos, ataques filosóficos y
+                ocasionales halagos a la música de Wagner (hasta que se pelearon y dejó de ser fan). Su influencia
+                en la filosofía, la psicología y la literatura es inmensa, aunque en vida fue más bien ignorado o
+                malinterpretado.</p>
+
+            <button class="botonMuerte" data-tab="muertoNietzsche">
+                <h2>Fallecimiento</h2>
+            </button>
+            <div id="muerteNiet"></div>
+            <p>Nietzsche sufrió un colapso mental en 1889, aparentemente tras ver cómo golpeaban a un caballo en
+                Turín. Pasó el resto de su vida en un estado de demencia, mientras su hermana—que tenía
+                inclinaciones políticas bastante dudosas—se encargó de manipular sus escritos para que parecieran
+                más afines al nazismo (spoiler: no lo eran). Finalmente, murió el 25 de agosto de 1900, dejando un
+                legado de pensamiento radical y citas filosóficas perfectas para poner en biografías de Instagram.
+            </p>
+            <div id="contenidoFoto">
+                <div class="imagenes"><img src="img/Nietzsche.jpg" alt="Friedrich Nietzsche" class="imagenes"></div>
+                <div class="texto">
+                    <h2>Friedrich Nietzsche (1844-1900)</h2>
+                    <p>Filósofo alemán que declaró que "Dios ha muerto", lo cual probablemente le ganó muchas miradas
+                        incómodas en reuniones familiares. Creía que la moral era para débiles y que el superhombre no
+                        se
+                        preocuparía por pagar impuestos. Murió abrazando un caballo… lo que prueba que la vida de un
+                        filósofo no es fácil.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="contenido" id="pes4">
+            <div id="imagenes">
+                <div id="img1"><img src="img\butler.jpg" alt=""></div>
+                <div id="img2"><img src="img\descartes.jpg" alt=""></div>
+                <div id="img3"><img src="img\foucault.jpg" alt=""></div>
+                <div id="img4"><img src="img\hannah.jpeg" alt=""></div>
+                <div id="img5"><img src="img\kant.jpeg" alt=""></div>
+                <div id="img6"><img src="img\licensed-image.jpeg" alt=""></div>
+                <div id="img7"><img src="img\marx.png" alt=""></div>
+                <div id="img8"><img src="img\Nietzsche.jpg" alt=""></div>
+                <div id="img9"><img src="img\simon.jpeg" alt=""></div>
+                <div id="img10"><img src="img\tolkien.webp" alt=""></div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div id="cookie-banner" class="cookie-banner">
+            <p>
+                Este sitio web utiliza cookies para mejorar tu experiencia.
+                <a href="/politica-de-cookies" target="_blank">Más información</a>.
+            </p>
+            <button id="accept-cookies" class="cookie-button">Aceptar</button>
+        </div>
+    </footer>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

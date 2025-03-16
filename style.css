@@ -1,0 +1,186 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+main {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 1000px;
+}
+
+button {
+    border-radius: 10px;
+}
+
+.contenido {
+    display: none; /* Oculta todas las pestañas por defecto */
+    padding: 20px;
+    align-items: center;
+    gap: 20px;
+}
+
+.contenido.visible {
+    display: flex; /* Solo la pestaña activa se muestra */
+}
+
+
+/* Estilos para las imágenes */
+.imagenes {
+    flex: 0 0 150px; /* Tamaño fijo para la imagen */
+    text-align: center;
+}
+
+.imagenes img {
+    width: 100%; /* La imagen ocupa todo el espacio del contenedor */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el texto */
+.texto {
+    flex: 1; /* El texto ocupará el espacio restante */
+}
+
+.texto h2 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.texto p {
+    margin: 10px 0 0;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+.pestanias-contenedor {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.pestanias {
+    display: flex;
+    border-bottom: 2px solid #ccc;
+    justify-content: space-around;
+}
+
+.pestaniaBoton {
+
+    padding: 5px 15px; /* Reducimos el espacio interno */
+    border: none;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    flex: 1;
+    text-align: center;
+    transition: background-color 0.3s;
+    margin: 2px 3px;
+    height: auto;
+}
+
+.pestaniaBoton:hover {
+    background-color: #ddd;
+}
+
+.pestaniaBoton.pestania-activada {
+    background-color: #007bff;
+    color: white;
+}
+
+
+
+
+
+#imagenes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Columnas flexibles */
+    gap: 10px; /* Espacio entre imágenes */
+    grid-auto-flow: dense; /* Rellena los espacios vacíos */
+}
+
+#imagenes div {
+    overflow: hidden; /* Evita que las imágenes se salgan del contenedor */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+#imagenes img {
+    width: 100%; /* Ajusta la imagen al ancho del contenedor */
+    height: 100%; /* Ajusta la imagen al alto del contenedor */
+    object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
+    display: block; /* Elimina el espacio adicional debajo de la imagen */
+}
+
+/* Tamaños específicos para las imágenes */
+#img1, #img2 {
+    grid-column: span 2; /* Ocupa 2 columnas */
+    grid-row: span 2; /* Ocupa 2 filas */
+}
+
+#img3, #img4,#img6 {
+    grid-column: span 1; /* Ocupa 1 columna */
+    grid-row: span 1; /* Ocupa 1 fila */
+}
+
+#img5 {
+    grid-column: span 3; /* Ocupa 2 columnas */
+    grid-row: span 3; /* Ocupa 2 filas */
+}
+
+ #img7, #img8, #img9, #img10 {
+    grid-column: span 1; /* Ocupa 1 columna */
+    grid-row: span 2; /* Ocupa 1 fila */
+}
+
+
+
+
+/* Estilos para el cartel de cookies */
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.cookie-banner p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.cookie-banner a {
+    color: #4caf50;
+    text-decoration: underline;
+}
+
+.cookie-button {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.cookie-button:hover {
+    background-color: #45a049;
+}
