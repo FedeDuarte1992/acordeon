@@ -1,11 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
     const pestaniaBoton = document.querySelectorAll(".pestaniaBoton");
     const contenido = document.querySelectorAll(".contenido");
-    const contenidoFoto = document.querySelectorAll(".contenidoFoto");
 
-    // Botones secundarios (Biografía, Desarrollo, Muerte)
+    // Botones secundarios (Biografía, Desarrollo, Fallecimiento)
     const sectionButtons = document.querySelectorAll(".botonBiografia, .botonAcademico, .botonMuerte");
-    const sectionContents = document.querySelectorAll(".seccionSecundaria");
 
     // Función para cambiar de pestaña principal
     function switchTab(event) {
@@ -25,12 +23,6 @@ document.addEventListener("DOMContentLoaded", function () {
         // Quitar la clase activa de los botones
         pestaniaBoton.forEach(button => button.classList.remove("pestania-activada"));
         event.currentTarget.classList.add("pestania-activada");
-
-        // Siempre mostrar la imagen
-        contenidoFoto.forEach(foto => foto.style.display = "block");
-
-        // Ocultar las secciones secundarias cuando se cambia de pestaña
-        sectionContents.forEach(content => content.style.display = "none");
     }
 
     // Agregar eventos a los botones principales
@@ -48,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
         
         // Verificar si la pestaña principal está activa antes de mostrar la secundaria
         if (!parentTab || !parentTab.classList.contains("visible")) {
-            return; // No hace nada si la pestaña principal no está visible
+            return;
         }
 
         // Ocultar todas las secciones secundarias dentro de la pestaña activa
@@ -64,6 +56,33 @@ document.addEventListener("DOMContentLoaded", function () {
     sectionButtons.forEach(button => button.addEventListener("click", switchSecondary));
 
     // Mostrar solo la primera pestaña al cargar
-    const firstTab = document.querySelector(".contenido");
-    if (firstTab) firstTab.classList.add("visible");
+    if (contenido.length > 0) contenido[0].classList.add("visible");
+
+    // Ocultar todas las secciones secundarias al inicio
+    document.querySelectorAll(".seccionSecundaria").forEach(section => section.style.display = "none");
 });
+document.addEventListener("DOMContentLoaded", function () {
+    // Seleccionar los botones del acordeón
+    const botones = document.querySelectorAll(".botonBiografia, .botonAcademico, .botonMuerte");
+
+    botones.forEach(boton => {
+        boton.addEventListener("click", function () {
+            // Encuentra el div relacionado al botón
+            const contenido = this.nextElementSibling;
+
+            // Alternar visibilidad y clase activa
+            contenido.classList.toggle("activo");
+            this.classList.toggle("activo");
+
+            // Cerrar otros acordeones dentro de la misma sección
+            let seccion = this.parentElement;
+            seccion.querySelectorAll("div").forEach(div => {
+                if (div !== contenido && div.classList.contains("activo")) {
+                    div.classList.remove("activo");
+                    div.previousElementSibling.classList.remove("activo");
+                }
+            });
+        });
+    });
+});
+
